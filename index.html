@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mohamed Rihi</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script language="Javascript" >
+    function download() {
+      
+     
+      var text =  window.document.myform.text.value;
+      var problem =  window.document.myform.problem.value;
+      
+      var pom = document.createElement('a');
+      pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+        
+        "Rating: " + encodeURIComponent(problem) + "  \n Feedback:" +
+        encodeURIComponent(text)); 
+    
+      pom.setAttribute('download', 'feedback.txt');
+    
+      pom.style.display = 'none';
+      document.body.appendChild(pom);
+    
+      pom.click();
+    
+      document.body.removeChild(pom);
+    }
+    </script>
+
+
+<body>
+   
+<div id="page">
+    <div class="photo-and-name">
+        <img src="./Pic.jpeg" class="photo" alt="Profile Picture">
+        <div class="contact-info-box">
+            <h1 class="name">Muhammad Rihi</h1>
+            <br>
+            <h3 class="job-title">Ingénieur Informatique</h3>
+            <p class="contact-details">Tel: (+212)762052952 &nbsp; - &nbsp; Email: mohamedrihi75@gmail.com <br> Lieu: Casablanca</p>
+        </div>
+    </div>
+    <div id="objective">
+        <h3>Profil</h3>
+        <p>Ambitieux, créatif, curieux, j'ai un diplome en ingénierie informatique aspirant à consolider et mettre a profit mes connaissances concernant l'ingénierie.
+            
+        </p>
+    </div>
+    <div id="education">
+        <h3>Formation</h3>
+        <table>
+            <tr class="school-1">
+                <td rowspan="2">2019 - 2020</td>
+                <td><b>Baccalauréat en science mathématique</b></td>
+            </tr>
+            <tr class="school-2">
+                <td>Obtention d'un baccalauréat en sciences mathématique B, mention très bien</td>
+            </tr>
+            
+            <tr class="school-1">
+                <td rowspan="2">2020 - 2025</td>
+                <td><b>diplome d'ingénieur Informatique</b></td>
+            </tr>
+            <tr class="school-2">
+                <td>Ensam Casablanca</td>
+            </tr>
+            
+            
+        </table>
+    </div>
+    <div id="work">
+        <h3>Experience</h3>
+        <table>
+            <tr class="work-1">
+                <td>2020 - 2021</td>
+                <td><b>Stage d'initiation</b>: Etude général de la production des cables et des machines.</td>
+            </tr>
+            <tr class="work-2">
+                <td>2022 - 2023</td>
+                <td><b>Stage technique</b>: Vérifier l'utilisation des machines et d'un appareil a pression.</td>
+            </tr>
+            <tr class="work-3" >
+                <td>2024 - 2025</td>
+                <td><b>Stage de fin d'année</b>: Analyse, conception et réalisation d'un système pour un projet.</td>
+            </tr>
+        </table>
+    </div>
+    <div id="Projet">
+        <h3>Projet</h3>
+        <ul>
+            <li>Simulation du lancement d'un produit avec application des principes du marketing Mix.</li>
+            <li>Création d'un site web.</li>
+            <li>Etude d'un projet.</li>
+        </ul>
+    </div>
+
+    <div id="Competences">
+        <h3>Competences</h3>
+        <h4>Connaissance informatiques:</h4>
+        <ul>
+            <li>Microsoft Office</li>
+            <li>MsProject</li>
+            <li>Rs Logix</li>
+            <li>Simulink</li>
+            <li>Mathcad</li>
+            <li>C/C++</li>
+        </ul>
+        <h4>Connaissance Managériales:</h4>
+        <ul>
+            <li>Marketing</li>
+            <li>Etude du marche</li>
+            <li>Gestion de projet</li>
+            
+        </ul>
+    </div>
+
+    <div id="Hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Blogging</li>
+            <li>Apprendre une nouvelle langue.</li>
+            <li>Rester informé.</li>
+            <li>Planification des vacances.</li>
+        </ul>
+    </div>
+
+    
+</div>
+<form name="myform" method="post" >
+    <h1>Feedback</h1>
+    <h3 for="">Design:</h3>
+    <p>
+        <input type="radio" value="Passable" id="test1" onclick="getElementById('problem').value=this.value; getElementById('problem').show()" />
+        <label for="test1">Passable</label>
+    </p>
+    <p>
+        <input type="radio" value="Bon" id="test2" onclick="getElementById('problem').value=this.value; getElementById('problem').show()" />
+        <label for="test2">Bon</label>
+    </p>
+    <p>
+        <input type="radio" value="Très bon" id="test3" onclick="getElementById('problem').value=this.value; getElementById('problem').show()"  />
+        <label for="test3">Très bon</label>
+      </p>
+      <p>
+        <input type="radio" value="Excellent" id="test4" onclick="getElementById('problem').value=this.value; getElementById('problem').show()" />
+        <label for="test4">Excellent</label>
+      </p>
+      
+      <input type="text" id="problem" hidden/>
+      
+      <textarea id="text" placeholder="Tapez votre Message Ici...." tabindex="5" required></textarea>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" onClick="download();">Submit</button>
+      
+    </fieldset>
+</form>
+
+</body>
+</html>
