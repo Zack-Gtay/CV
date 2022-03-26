@@ -168,6 +168,28 @@ body{font-family: 'Montserrat', sans-serif;}
     color: grey;
 }
 
+#Languages h3{
+    border: 1px solid #d3d3d3;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 30px 0 10px;
+}
+#Languages span{
+    color: black;
+}
+
+
+
+#Languages ul{
+    list-style: circle;
+    margin-top: 20px;
+}
+
+#Languages li{
+    list-style-position: inside;
+    margin-top: 10px;
+}
 
 #Hobbies h3{
     border: 1px solid #d3d3d3;
@@ -176,8 +198,6 @@ body{font-family: 'Montserrat', sans-serif;}
     border-radius: 5px;
     margin: 30px 0 10px;
 }
-
-
 #Hobbies ul{
    
     list-style: circle;
@@ -233,8 +253,6 @@ input[type="radio"]:default + label {
 }
 
 
-
- 
 
 form button[type="submit"] {
 	cursor:pointer;
